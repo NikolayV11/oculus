@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Helvetica", sans-serif;
+  src: url("../public/fonts/helvetica.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Helvetica-bold", sans-serif;
+  src: url("../public/fonts/helvetica-bold.woff2");
+  font-style: normal;
+  font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #5c5c5e;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  border-bottom: 1px solid var(--light-grey, #cacad6);
+}
+
+.nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.menu {
+  display: flex;
+  gap: 0 20px;
+}
+.logo {
+}
+.logo SVG {
+  width: 235px;
+  height: 42px;
+}
+.basket {
+  position: relative;
+}
+.basket SVG {
+  width: 24px;
+  height: 24px;
+}
+.basket span {
+  position: absolute;
+  color: #fff;
+  font-size: 11px;
+  line-height: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  bottom: 0;
+  right: -4px;
 }
