@@ -21,3 +21,18 @@ li {
 img {
   max-width: 100%;
 }
+
+.section-title {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+button {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
