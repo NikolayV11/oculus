@@ -219,6 +219,15 @@ function App() {
             </div>
           </div>
         </section>
+        <div className="buy">
+          <p className="buy__bg">OCULUS</p>
+          <img src="/img/oculus.png" alt="" className="buy__img" />{" "}
+          <button className="buy-btn buy-btn-oculus">
+            <span className="buy-btn__text">BUY NOW</span>
+            <span className="buy-btn__price">399,99 USD</span>
+          </button>
+          <p className="buy__text">Meta Quest 2 is for ages 13+</p>
+        </div>
       </main>
     </div>
   );

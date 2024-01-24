@@ -334,3 +334,44 @@ body {
   -webkit-text-fill-color: transparent;
   margin-top: auto;
 }
+
+.buy {
+  position: relative;
+  margin-top: 100px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.buy__bg {
+  position: absolute;
+  z-index: -1;
+
+  font-family: Inter;
+  font-size: 400px;
+  font-weight: 700;
+  line-height: 398px;
+
+  opacity: 0.1;
+  background: var(--gradient, linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: line-text 7s linear 1s infinite;
+}
+
+@keyframes line-text {
+  from {
+    transform: translateX(115%);
+    transform-origin: left center;
+  }
+  to {
+    transform: translateX(-115%);
+    transform-origin: right center;
+  }
+}
+
+.buy__img {
+}
+.buy-btn-oculus {
+  margin: 30px auto 0;
+}
