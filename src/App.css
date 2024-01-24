@@ -375,3 +375,43 @@ body {
 .buy-btn-oculus {
   margin: 30px auto 0;
 }
+
+.equipment {
+  margin-top: 134px;
+}
+
+.equipment__title {
+}
+
+.equipment__box {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px 30px;
+}
+
+.equipment__box-item {
+}
+.equipment__box-img {
+  max-width: none;
+}
+.equipment__box-text {
+  margin-top: 10px;
+}
+.equipment__box-title {
+  font-family: Helvetica;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 50px;
+
+  background: var(--gradient, linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.equipment__box-item--one {
+  grid-row: 1/-1;
+}

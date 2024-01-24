@@ -228,6 +228,32 @@ function App() {
           </button>
           <p className="buy__text">Meta Quest 2 is for ages 13+</p>
         </div>
+        <section className="equipment">
+          <div className="container">
+            <h2 className="equipment__title section-title">IN THE BOX</h2>
+            <div className="equipment__box">
+              <div className="equipment__box-item equipment__box-item--one">
+                <img src="/img/eq_1.png" alt="" className="equipment__box-img" />
+                <p className="equipment__box-text">VR Headset</p>
+              </div>
+              <div className="equipment__box-item">
+                <img src="/img/eq_2.png" alt="" className="equipment__box-img" />
+                <p className="equipment__box-text">Two Touch Controllers & AA Batteries</p>
+              </div>
+              <div className="equipment__box-item">
+                <p className="equipment__box-title">What's included</p>
+              </div>
+              <div className="equipment__box-item">
+                <img src="/img/eq_3.png" alt="" className="equipment__box-img" />
+                <p className="equipment__box-text">Charging Cable & Power Adapter</p>
+              </div>
+              <div className="equipment__box-item">
+                <img src="/img/eq_4.png" alt="" className="equipment__box-img" />
+                <p className="equipment__box-text">Glasses Spacer</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
