@@ -254,6 +254,13 @@ function App() {
             </div>
           </div>
         </section>
+        <div className="promo">
+          <div className="container">
+            <div className="promo__inner">
+              <button className="promo__btn">GO</button>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );
