@@ -9,11 +9,13 @@ import play from "./img/play.svg";
 
 type tabsBtnItemType = { title: string; data: number };
 type tabsContentType = { title: string; text: string; urlImg: string; textBtn: string };
-type listBtnType = {
-  item: tabsBtnItemType;
-  index: number;
+type gameItemType = {
+  title: string;
+  urlImg: string;
+  urlLink: string;
+  textLink: string;
+  text: string;
 };
-
 const tabsBtnItem: tabsBtnItemType[] = [
   { title: "01 Graphics", data: 0 },
   { title: "02 Controls", data: 1 },
@@ -62,6 +64,31 @@ const tabsContent: tabsContentType[] = [
     textBtn: "Watch the video",
   },
 ];
+
+const gameItem: gameItemType[] = [
+  {
+    title: "Blade & Sorcery: Nomad",
+    urlImg: "/img/game_1.jpg",
+    urlLink: "#",
+    textLink: "see more",
+    text: "Step into a medieval fantasy sandbox that uses phisics to serve up some of the most realistic combat in VR",
+  },
+  {
+    title: "Population: One",
+    urlImg: "/img/game_2.jpg",
+    urlLink: "#",
+    textLink: "see more",
+    text: "Climb anything. Fight everywhere. Experience battle royale only possible in VR",
+  },
+  {
+    title: "Supernatural",
+    urlImg: "/img/game_3.jpg",
+    urlLink: "#",
+    textLink: "see more",
+    text: "Box, Flow, Meditate and Stretch with real coaches in stunning destinations from around the world. Enjoy new workouts every day.",
+  },
+];
+
 function App() {
   const [activeBtn, setActiveBtn] = React.useState<number>(0);
 
@@ -159,6 +186,36 @@ function App() {
                   );
                 })}
               </div>
+            </div>
+          </div>
+        </section>
+        <section className="game">
+          <div className="container">
+            <h2 className="section-title game__title">GAMES</h2>
+            <div className="game__inner">
+              <div className="game__descr">
+                <p className="game__descr-title">It’s all fun and games</p>
+                <p className="game__descr-text">
+                  Discover new adventures, master epic challenges or revisit classic moments in your
+                  favourite games and experiences
+                </p>
+                <a className="game__descr-link" href="#">
+                  SEE ALL GAMES
+                </a>
+              </div>
+
+              {gameItem.map((item, index) => {
+                return (
+                  <div key={index} className="game__item">
+                    <img className="game__item-img" src={item.urlImg} alt="" />
+                    <h3 className="game__item-title">{item.title}</h3>
+                    <p className="game__item-text">{item.text}</p>
+                    <a href={item.urlLink} className="game__item-link">
+                      {item.textLink}
+                    </a>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
