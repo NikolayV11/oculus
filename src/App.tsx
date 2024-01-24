@@ -16,6 +16,13 @@ type gameItemType = {
   textLink: string;
   text: string;
 };
+type accessoriesType = {
+  title: string;
+  text: string;
+  price: number;
+  price2: number;
+  imgUrl: string;
+};
 const tabsBtnItem: tabsBtnItemType[] = [
   { title: "01 Graphics", data: 0 },
   { title: "02 Controls", data: 1 },
@@ -86,6 +93,37 @@ const gameItem: gameItemType[] = [
     urlLink: "#",
     textLink: "see more",
     text: "Box, Flow, Meditate and Stretch with real coaches in stunning destinations from around the world. Enjoy new workouts every day.",
+  },
+];
+
+const accessories: accessoriesType[] = [
+  {
+    title: "Meta Quest 2 Carrying Case",
+    text: "Protect your system–at home or away.",
+    price: 59.99,
+    price2: 0,
+    imgUrl: "/img/acce_1.jpg",
+  },
+  {
+    title: "Link Cable",
+    text: "Harness the power of your PC with this premium fiber-optic cable.",
+    price: 79.99,
+    price2: 0,
+    imgUrl: "/img/acce_2.jpg",
+  },
+  {
+    title: "Meta Quest 2 Active Pack",
+    text: "A wipeable facial interface, wrist straps, and knuckle straps.",
+    price: 69.99,
+    price2: 0,
+    imgUrl: "/img/acce_3.jpg",
+  },
+  {
+    title: "Meta Quest Gift Cards",
+    text: "Redeemable on 350+ games and apps.",
+    price: 15,
+    price2: 50,
+    imgUrl: "/img/acce_4.jpg",
   },
 ];
 
@@ -261,6 +299,28 @@ function App() {
             </div>
           </div>
         </div>
+        <section className="accessories">
+          <div className="container">
+            <h2 className="accessories__title section-title">ACCESSORIES</h2>
+            <p className="accessories__text">Personalize every experience</p>
+            <div className="accessories__items">
+              {accessories.map((item, index) => {
+                return (
+                  <div key={index} className="accessories__item">
+                    <img className="accessories__item-img" src={item.imgUrl} alt="" />
+                    <h3 className="accessories__item-title">{item.title}</h3>
+                    <p className="accessories__item-text">{item.text}</p>
+                    <p className="accessories__item-price">
+                      ${item.price}
+                      {item.price2 > 0 ? `-${item.price2}` : ""} USD
+                    </p>
+                    <button className="accessories__item-btn">BUY NOW</button>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
