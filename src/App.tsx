@@ -347,6 +347,54 @@ function App() {
           </div>
         </section>
       </main>
+      <footer className="footer">
+        <div className="container">
+          <nav className="nav">
+            <ul className="menu">
+              <li className="menu__list">
+                <a href="#" className="menu__link">
+                  SHOP
+                </a>
+              </li>
+              <li className="menu__list">
+                <a href="#" className="menu__link">
+                  GAMES
+                </a>
+              </li>
+              <li className="menu__list">
+                <a href="#" className="menu__link">
+                  METAVERSE
+                </a>
+              </li>
+              <li className="menu__list">
+                <a href="#" className="menu__link">
+                  CONTACT US
+                </a>
+              </li>
+            </ul>
+            <a className="logo" href="#">
+              <HandySvg src={logo} />
+            </a>
+            <ul className="social">
+              <li className="social__item">
+                <a href="#" className="social__link">
+                  <HandySvg src={"/img/YT.svg"} />
+                </a>
+              </li>
+              <li className="social__item">
+                <a href="#" className="social__link">
+                  <HandySvg src={"/img/F.svg"} />
+                </a>
+              </li>
+              <li className="social__item">
+                <a href="#" className="social__link">
+                  <HandySvg src={"/img/I.svg"} />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
     </div>
   );
 }

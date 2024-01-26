@@ -43,6 +43,7 @@ body {
 }
 
 .logo {
+  display: flex;
   justify-self: center;
 }
 
@@ -575,4 +576,29 @@ body {
   padding-right: 15px;
 }
 .contacts__emil {
+}
+.footer {
+  margin-top: 103px;
+  margin-bottom: 43px;
+  border-top: 1px solid #cacad6;
+  border-bottom: 1px solid #cacad6;
+}
+.social {
+  display: flex;
+  gap: 0 20px;
+  justify-self: end;
+  align-items: center;
+}
+
+.social__item {
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social__link svg {
+  width: 30px;
+  height: 30px;
 }
