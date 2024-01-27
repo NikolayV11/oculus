@@ -135,7 +135,7 @@ function App() {
   }
   return (
     <div>
-      <header className="header">
+      {/* <header className="header">
         <div className="container">
           <nav className="nav">
             <ul className="menu">
@@ -164,190 +164,194 @@ function App() {
             </a>
           </nav>
         </div>
-      </header>
+      </header> */}
       <main className="main">
-        <section className="top">
-          <div className="container">
-            <h1 className="title">Meta Quest 2</h1>
-            <p className="subtitle">Get an Elite Strap free</p>
-            <p className="top__text">
-              For a limited time only, save $59.99 USD. Offer ends 1/19/23
-            </p>
-            <button className="buy-btn">
-              <span className="buy-btn__text">BUY NOW</span>
-              <span className="buy-btn__price">399,99 USD</span>
-            </button>
-            <p className="buy__text">Meta Quest 2 is for ages 13+</p>
-          </div>
-        </section>
-        <section className="features">
-          <div className="container">
-            <div className="features__titles">
-              <h2 className="features__title section-title">PRODUCT FEATURES</h2>
-              <p className="features__text">Easy to set up and safe to use</p>
-            </div>
-            <div className="tabs">
-              <div className="tabs__btn">
-                {tabsBtnItem.map((items): any => {
-                  return (
-                    <button
-                      key={items.data}
-                      onClick={() => onClickBtn(items.data)}
-                      className={`tabs__btn-item ${
-                        activeBtn === items.data ? "tabs__btn-item--active" : ""
-                      }`}>
-                      {items.title}
-                    </button>
-                  );
-                })}
-              </div>
-              <div className="tabs__content">
-                {tabsContent.map((item, index) => {
-                  return (
-                    <div
-                      key={index}
-                      className={`tabs__content-item ${
-                        activeBtn === index ? "tabs__content-item--active" : ""
-                      }`}>
-                      <img className="tabs__content-img" src={item.urlImg} alt="content_1" />
-                      <div className="tabs__content-box">
-                        <h3>{item.title}</h3>
-                        <p>{item.text}</p>
-                      </div>
-                      <div className="video">
-                        <button className="video__btn">
-                          <HandySvg src={play} />
-                        </button>
-                        <span>{item.textBtn}</span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="game">
-          <div className="container">
-            <h2 className="section-title game__title">GAMES</h2>
-            <div className="game__inner">
-              <div className="game__descr">
-                <p className="game__descr-title">It’s all fun and games</p>
-                <p className="game__descr-text">
-                  Discover new adventures, master epic challenges or revisit classic moments in your
-                  favourite games and experiences
+        {
+          <>
+            <section className="top">
+              <div className="container">
+                <h1 className="title">Meta Quest 2</h1>
+                <p className="subtitle">Get an Elite Strap free</p>
+                <p className="top__text">
+                  For a limited time only, save $59.99 USD. Offer ends 1/19/23
                 </p>
-                <a className="game__descr-link" href="#">
-                  SEE ALL GAMES
-                </a>
+                <button className="buy-btn">
+                  <span className="buy-btn__text">BUY NOW</span>
+                  <span className="buy-btn__price">399,99 USD</span>
+                </button>
+                <p className="buy__text">Meta Quest 2 is for ages 13+</p>
               </div>
-
-              {gameItem.map((item, index) => {
-                return (
-                  <div key={index} className="game__item">
-                    <img className="game__item-img" src={item.urlImg} alt="" />
-                    <h3 className="game__item-title">{item.title}</h3>
-                    <p className="game__item-text">{item.text}</p>
-                    <a href={item.urlLink} className="game__item-link">
-                      {item.textLink}
+            </section>
+            <section className="features">
+              <div className="container">
+                <div className="features__titles">
+                  <h2 className="features__title section-title">PRODUCT FEATURES</h2>
+                  <p className="features__text">Easy to set up and safe to use</p>
+                </div>
+                <div className="tabs">
+                  <div className="tabs__btn">
+                    {tabsBtnItem.map((items): any => {
+                      return (
+                        <button
+                          key={items.data}
+                          onClick={() => onClickBtn(items.data)}
+                          className={`tabs__btn-item ${
+                            activeBtn === items.data ? "tabs__btn-item--active" : ""
+                          }`}>
+                          {items.title}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <div className="tabs__content">
+                    {tabsContent.map((item, index) => {
+                      return (
+                        <div
+                          key={index}
+                          className={`tabs__content-item ${
+                            activeBtn === index ? "tabs__content-item--active" : ""
+                          }`}>
+                          <img className="tabs__content-img" src={item.urlImg} alt="content_1" />
+                          <div className="tabs__content-box">
+                            <h3>{item.title}</h3>
+                            <p>{item.text}</p>
+                          </div>
+                          <div className="video">
+                            <button className="video__btn">
+                              <HandySvg src={play} />
+                            </button>
+                            <span>{item.textBtn}</span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className="game">
+              <div className="container">
+                <h2 className="section-title game__title">GAMES</h2>
+                <div className="game__inner">
+                  <div className="game__descr">
+                    <p className="game__descr-title">It’s all fun and games</p>
+                    <p className="game__descr-text">
+                      Discover new adventures, master epic challenges or revisit classic moments in
+                      your favourite games and experiences
+                    </p>
+                    <a className="game__descr-link" href="#">
+                      SEE ALL GAMES
                     </a>
                   </div>
-                );
-              })}
+
+                  {gameItem.map((item, index) => {
+                    return (
+                      <div key={index} className="game__item">
+                        <img className="game__item-img" src={item.urlImg} alt="" />
+                        <h3 className="game__item-title">{item.title}</h3>
+                        <p className="game__item-text">{item.text}</p>
+                        <a href={item.urlLink} className="game__item-link">
+                          {item.textLink}
+                        </a>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </section>
+            <div className="buy">
+              <p className="buy__bg">OCULUS</p>
+              <img src="/img/oculus.png" alt="" className="buy__img" />{" "}
+              <button className="buy-btn buy-btn-oculus">
+                <span className="buy-btn__text">BUY NOW</span>
+                <span className="buy-btn__price">399,99 USD</span>
+              </button>
+              <p className="buy__text">Meta Quest 2 is for ages 13+</p>
             </div>
-          </div>
-        </section>
-        <div className="buy">
-          <p className="buy__bg">OCULUS</p>
-          <img src="/img/oculus.png" alt="" className="buy__img" />{" "}
-          <button className="buy-btn buy-btn-oculus">
-            <span className="buy-btn__text">BUY NOW</span>
-            <span className="buy-btn__price">399,99 USD</span>
-          </button>
-          <p className="buy__text">Meta Quest 2 is for ages 13+</p>
-        </div>
-        <section className="equipment">
-          <div className="container">
-            <h2 className="equipment__title section-title">IN THE BOX</h2>
-            <div className="equipment__box">
-              <div className="equipment__box-item equipment__box-item--one">
-                <img src="/img/eq_1.png" alt="" className="equipment__box-img" />
-                <p className="equipment__box-text">VR Headset</p>
-              </div>
-              <div className="equipment__box-item">
-                <img src="/img/eq_2.png" alt="" className="equipment__box-img" />
-                <p className="equipment__box-text">Two Touch Controllers & AA Batteries</p>
-              </div>
-              <div className="equipment__box-item">
-                <p className="equipment__box-title">What's included</p>
-              </div>
-              <div className="equipment__box-item">
-                <img src="/img/eq_3.png" alt="" className="equipment__box-img" />
-                <p className="equipment__box-text">Charging Cable & Power Adapter</p>
-              </div>
-              <div className="equipment__box-item">
-                <img src="/img/eq_4.png" alt="" className="equipment__box-img" />
-                <p className="equipment__box-text">Glasses Spacer</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div className="promo">
-          <div className="container">
-            <div className="promo__inner">
-              <button className="promo__btn">GO</button>
-            </div>
-          </div>
-        </div>
-        <section className="accessories">
-          <div className="container">
-            <h2 className="accessories__title section-title">ACCESSORIES</h2>
-            <p className="accessories__text">Personalize every experience</p>
-            <div className="accessories__items">
-              {accessories.map((item, index) => {
-                return (
-                  <div key={index} className="accessories__item">
-                    <img className="accessories__item-img" src={item.imgUrl} alt="" />
-                    <h3 className="accessories__item-title">{item.title}</h3>
-                    <p className="accessories__item-text">{item.text}</p>
-                    <p className="accessories__item-price">
-                      ${item.price}
-                      {item.price2 > 0 ? `-${item.price2}` : ""} USD
-                    </p>
-                    <button className="accessories__item-btn">BUY NOW</button>
+            <section className="equipment">
+              <div className="container">
+                <h2 className="equipment__title section-title">IN THE BOX</h2>
+                <div className="equipment__box">
+                  <div className="equipment__box-item equipment__box-item--one">
+                    <img src="/img/eq_1.png" alt="" className="equipment__box-img" />
+                    <p className="equipment__box-text">VR Headset</p>
                   </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-        <section className="contacts">
-          <div className="container">
-            <h2 className="contacts__title">Get news and updates</h2>
-            <div className="contats__inner">
-              <div className="contacts__form">
-                <form className="form">
-                  <input type="text" placeholder="E-mail" className="form__input" />
-                  <button className="form__btn" type="submit">
-                    GO
-                  </button>
-                </form>
-                <p className="contacts__text">
-                  By signing up you agree to receive updates and marketing messages (e.g. email,
-                  social, etc.) from Meta about Meta’s existing and future products and services.
-                  You may withdraw your consent and unsubscribe at any time by clicking the
-                  unsubscribe link included in our messages. Your subscription is subject to the
-                  Terms and Privacy Policy.
-                </p>
+                  <div className="equipment__box-item">
+                    <img src="/img/eq_2.png" alt="" className="equipment__box-img" />
+                    <p className="equipment__box-text">Two Touch Controllers & AA Batteries</p>
+                  </div>
+                  <div className="equipment__box-item">
+                    <p className="equipment__box-title">What's included</p>
+                  </div>
+                  <div className="equipment__box-item">
+                    <img src="/img/eq_3.png" alt="" className="equipment__box-img" />
+                    <p className="equipment__box-text">Charging Cable & Power Adapter</p>
+                  </div>
+                  <div className="equipment__box-item">
+                    <img src="/img/eq_4.png" alt="" className="equipment__box-img" />
+                    <p className="equipment__box-text">Glasses Spacer</p>
+                  </div>
+                </div>
               </div>
-              <a href="mailto:oculusshop@gmail.com" className="contacts__emil">
-                oculusshop@gmail.com
-              </a>
+            </section>{" "}
+            <div className="promo">
+              <div className="container">
+                <div className="promo__inner">
+                  <button className="promo__btn">GO</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
+            <section className="accessories">
+              <div className="container">
+                <h2 className="accessories__title section-title">ACCESSORIES</h2>
+                <p className="accessories__text">Personalize every experience</p>
+                <div className="accessories__items">
+                  {accessories.map((item, index) => {
+                    return (
+                      <div key={index} className="accessories__item">
+                        <img className="accessories__item-img" src={item.imgUrl} alt="" />
+                        <h3 className="accessories__item-title">{item.title}</h3>
+                        <p className="accessories__item-text">{item.text}</p>
+                        <p className="accessories__item-price">
+                          ${item.price}
+                          {item.price2 > 0 ? `-${item.price2}` : ""} USD
+                        </p>
+                        <button className="accessories__item-btn">BUY NOW</button>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </section>
+            <section className="contacts">
+              <div className="container">
+                <h2 className="contacts__title">Get news and updates</h2>
+                <div className="contats__inner">
+                  <div className="contacts__form">
+                    <form className="form">
+                      <input type="text" placeholder="E-mail" className="form__input" />
+                      <button className="form__btn" type="submit">
+                        GO
+                      </button>
+                    </form>
+                    <p className="contacts__text">
+                      By signing up you agree to receive updates and marketing messages (e.g. email,
+                      social, etc.) from Meta about Meta’s existing and future products and
+                      services. You may withdraw your consent and unsubscribe at any time by
+                      clicking the unsubscribe link included in our messages. Your subscription is
+                      subject to the Terms and Privacy Policy.
+                    </p>
+                  </div>
+                  <a href="mailto:oculusshop@gmail.com" className="contacts__emil">
+                    oculusshop@gmail.com
+                  </a>
+                </div>
+              </div>
+            </section>
+          </>
+        }
       </main>
-      <footer className="footer">
+      {/* <footer className="footer">
         <div className="container">
           <nav className="nav">
             <ul className="menu">
@@ -394,7 +398,7 @@ function App() {
             </ul>
           </nav>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
