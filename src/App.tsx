@@ -129,16 +129,22 @@ const accessories: accessoriesType[] = [
 
 function App() {
   const [activeBtn, setActiveBtn] = React.useState<number>(0);
+  const [activeMenu, setActiveMenu] = React.useState(false);
 
   function onClickBtn(dataId: number) {
     setActiveBtn(dataId);
   }
   return (
     <div>
-      {/* <header className="header">
+      <header className="header">
         <div className="container">
           <nav className="nav">
-            <ul className="menu">
+            <button onClick={() => setActiveMenu(!activeMenu)} className="menu-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul className={`menu ${activeMenu && " menu--active"}`}>
               <li className="menu__list">
                 <a href="#" className="menu__link">
                   SHOP
@@ -164,7 +170,7 @@ function App() {
             </a>
           </nav>
         </div>
-      </header> */}
+      </header>
       <main className="main">
         {
           <>
@@ -351,7 +357,7 @@ function App() {
           </>
         }
       </main>
-      {/* <footer className="footer">
+      <footer className="footer">
         <div className="container">
           <nav className="nav">
             <ul className="menu">
@@ -398,7 +404,7 @@ function App() {
             </ul>
           </nav>
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 }
